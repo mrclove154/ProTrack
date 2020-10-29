@@ -1,0 +1,46 @@
+aside
+    background: $theme
+    color: $white
+    box-shadow: $box-shadow
+
+    display: none
+
+    &.aside-fixed
+        position: fixed
+        top: 73px
+        bottom: 0
+        left: 0
+        z-index: 5
+
+    &.aside-card
+        background: lighten(#2a2d35, 5%)
+        display: block
+
+    &.active
+        display: block
+
+    &.active ~ main
+        padding-left: 57px
+
+    &.active ~ footer
+        left: 57px !important
+
+    ul
+        margin: 0
+        padding: 0
+        li
+            margin-bottom: 60px
+            &:first-child
+                margin-top: 60px
+            a
+                font-size: 14px
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-decoration: none
+                color: $white
+                span:first-child
+                    margin-bottom: 0.5rem
+                &.router-link-active
+                    color: $theme
+                    font-weight: $font-bold
